@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, View, StyleSheet, StatusBar } from 'react-native';
+import PageOne from './src/pages/PageOne';
+import Page1 from './assets/images/page1.png';
 
-export default function App() {
+const App = () => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <ImageBackground source={Page1} style={styles.image}>
+        <PageOne />
+      </ImageBackground>
+      <StatusBar style="light"/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+      flex: 1,
+      backgroundColor: "#8C5CB3"
   },
-});
+  image: {
+      flex: 1,
+      resizeMode: 'cover',
+  },
+})
+
+export default App;
