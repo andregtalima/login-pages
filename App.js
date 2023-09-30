@@ -1,27 +1,15 @@
-import { ImageBackground, View, StyleSheet, StatusBar } from 'react-native';
-import PageOne from './src/pages/PageOne';
-import Page1 from './assets/images/page1.png';
+import { NavigationContainer } from '@react-navigation/native'
+import { Home } from './src/components/Home'
+import { SignUp } from './src/components/SignUp'
+import { LogIn } from './src/components/LogIn'
 
-const App = () => {
-  return (
-    <View style={styles.container}>
-      <ImageBackground source={Page1} style={styles.image}>
-        <PageOne />
-      </ImageBackground>
-      <StatusBar style="light"/>
-    </View>
-  );
+export default function App(){
+  return(
+    <NavigationContainer>
+      <Home />
+      <SignUp />
+      <LogIn />
+    </NavigationContainer>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-      flex: 1,
-      backgroundColor: "#8C5CB3"
-  },
-  image: {
-      flex: 1,
-      resizeMode: 'cover',
-  },
-})
-
-export default App;
