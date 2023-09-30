@@ -1,10 +1,9 @@
-import { SafeAreaView } from "react-native";
-import Font from "../../components/Font";
+import { SafeAreaView, Text } from "react-native"
 
 export function Home(){
     return(
         <SafeAreaView>
-            <Font>Home</Font>
+            <Text>Home</Text>
         </SafeAreaView>
     )
 }

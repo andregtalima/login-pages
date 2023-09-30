@@ -1,10 +1,9 @@
-import { SafeAreaView } from "react-native";
-import Font from "../../components/Font";
+import { SafeAreaView, Text } from "react-native"
 
 export function LogIn(){
     return(
         <SafeAreaView>
-            <Font>Log in</Font>
+            <Text>Log in</Text>
         </SafeAreaView>
     )
 }
